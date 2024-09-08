@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">자바스크립트</h1>
+    <p id="test">위 텍스트를 클릭해 보세요</p>
+    <script>
+      let heading =
+        document.querySelector(
+          "#heading"
+        ); /* html의 id가 heading인 요소를 데리고 와서 heading이라는 변수를 만듬 */
+      heading.onclick = function () {
+        /*heading이라는 변수가 클릭이 되었을 떄 function이 실행된다*/
+        heading.style.color =
+          "red"; /*함수는 heading의 style에서 color가 red로 바뀐다는 뜻, heading이 아니라 headings처럼 이름 이상하게 적으면 작동X*/
+      };
+    </script>
+  </body>
+</html>
