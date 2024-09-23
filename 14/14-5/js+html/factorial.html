@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n = prompt("숫자 입력해");
+      let msg = "";
+
+      if (n != null) {
+        //취소 버튼을 누르 지 않았는지
+        let nFact = 1; //결과값
+        let i = 1; //카운터
+        while (i <= n) {
+          nFact *= i;
+          i++;
+        }
+        msg = n + "! = " + nFact; //결과값을 표시할 문자열
+      } else {
+        msg = "값을 입력X";
+      }
+      document.write(msg); //결과 표시
+    </script>
+  </body>
+</html>
