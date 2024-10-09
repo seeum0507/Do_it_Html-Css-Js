@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      #desc {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <img src="/Ex(Img, Video)/스크린샷 2024-05-20 100621.png" alt="image" />
@@ -13,14 +18,16 @@
       <p>보노보노</p>
       <button id="close" onclick="hideDetail()">상세설명 닫기</button>
     </div>
+
     <script>
       function showDetail() {
         document.querySelector("#desc").style.display = "block";
-        document.querySelector(".open").style.display = "none";
+        document.querySelector("#open").style.display = "none";
       }
+
       function hideDetail() {
         document.querySelector("#desc").style.display = "none";
-        document.querySelector(".open").style.display = "block";
+        document.querySelector("#open").style.display = "block";
       }
     </script>
   </body>
