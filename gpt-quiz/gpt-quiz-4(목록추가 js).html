@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="texts" onkeypress="checkEvent(event)" />
+    <button id="bnt" onclick="addList()">리스트 추가</button>
+    <ul id="list"></ul>
+    <script>
+      function addList() {
+        const input = document.querySelector("#texts");
+        const list = document.querySelector("#list");
+        let innerValue = input.value;
+
+        if (innerValue != "") {
+          const listItem = document.createElement("li");
+          listItem.innerText = innerValue;
+          listItem.addEventListener("click", deleteList);
+          list.appendChild(listItem);
+          input.value = "";
+          input.focus();
+        }
+      }
+      function checkEvent(event) {
+        if (event.key == "Enter") {
+          addList();
+        }
+      }
+      function deleteList() {
+        let listItem = event.target;
+        listItem.remove();
+      }
+    </script>
+  </body>
+</html>
