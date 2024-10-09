@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="num1" placeholder="계산할 값을 입력바람" />
+    <input type="text" id="num2" placeholder="계산할 값을 입력바람" />
+    <select id="list">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <button onclick="calculate()">계산하기!!</button>
+    <h5 id="result"></h5>
+    <script>
+      function calculate() {
+        let num1 = parseFloat(document.querySelector("#num1").value);
+        let num2 = parseFloat(document.querySelector("#num2").value);
+        let resultText = document.querySelector("#result");
+        let sign = document.querySelector("#list").value;
+        let result;
+        if (sign === "+") {
+          result = num1 + num2;
+        } else if (sign === "-") {
+          result = num1 - num2;
+        } else if (sign === "*") {
+          result = num1 * num2;
+        } else {
+          result = num1 / num2;
+        }
+        resultText.innerText = result;
+
+        document.querySelector("#num1").value = "";
+        document.querySelector("#num2").value = "";
+      }
+    </script>
+  </body>
+</html>
