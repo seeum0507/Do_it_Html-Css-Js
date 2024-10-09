@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #desc {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="item">
+      <img src="/Ex(Img, Video)/스크린샷 2024-05-20 100621.png" alt="image" />
+      <button class="over" id="open">상세 설명 보기</button>
+
+      <div id="desc" class="detail">
+        <h4>타조</h4>
+        <p>타조는 어쩌구저쩌구구구구구ㅜ국구ㅜ구국구구</p>
+        <button id="close">상세 설명 닫기</button>
+      </div>
+    </div>
+
+    <script>
+      document.querySelector("#open").onclick = function () {
+        document.querySelector("#desc").style.display = "block";
+        document.querySelector("#open").style.display = "none";
+      };
+
+      document.querySelector("#close").onclick = function () {
+        document.querySelector("#desc").style.display = "none";
+        document.querySelector("#open").style.display = "block";
+      };
+    </script>
+  </body>
+</html>
