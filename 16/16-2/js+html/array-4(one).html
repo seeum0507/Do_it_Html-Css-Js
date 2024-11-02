@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [1, 2, 3, 4, 5];
+      let newNumbers = numbers.splice(2);
+      document.write("반환된 배열 : " + newNumbers + "<br>"); //제거한 요소를 담은 배열을 반환하여 3, 4, 5반환
+      document.write("변경된 배열 : " + numbers); //제거한 요소를 담은 배열을 변경하여 1, 2반환
+    </script>
+  </body>
+</html>
