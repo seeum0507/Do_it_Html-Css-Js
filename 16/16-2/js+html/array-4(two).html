@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let study = ["html", "css", "web", "js"];
+      let newStudy = study.splice(2, 1); //web부터 하나 없애는거여서 web만 없어짐
+      document.write("반환된 배열 : " + newStudy + "<br>");
+      document.write("변경된 배열 : " + study); //web하나 없어서 html, css, js가 반환
+    </script>
+  </body>
+</html>
