@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let study = ["html", "css", "jquery"];
+      let newStudy2 = study.splice(2, 1, "js"); //인덱스가 2인 애부터 하나 없애고 그 뒤에 "js"추가
+      document.write("반환된 배열 : " + newStudy2 + "<br>"); //인덱스가 2부터 하나 없애서 jquery반환
+      document.write("변경된 배열 : " + study); //없앤거 뒤에 "js"추가하여 html, css, js반환
+    </script>
+  </body>
+</html>
